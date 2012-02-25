@@ -252,4 +252,10 @@ static NSManagedObjectContext *storedModelContext = nil;
   [scanner scanInt:&pID];
   return pID;
 }
+
++(NSString *)uniqueKey;
+{
+  return nil; // implement in subclass
+}
+
 @end

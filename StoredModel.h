@@ -47,7 +47,14 @@
 - (BOOL)save;
 - (BOOL)destroy;
 - (int)persistenceID;
+
+#pragma mark -
+#pragma mark Uniqueness
++(NSString*)uniqueKey;
+
 @end
+
+
 
 // Doing this because NSPredicate does some munging of dates
 // that [NSString stringWithFormat:] does not
