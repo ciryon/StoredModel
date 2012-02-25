@@ -9,7 +9,7 @@
 
 - (void)setUp {
   model = [[NSManagedObjectModel mergedModelFromBundles:
-            [NSArray arrayWithObject:[NSBundle bundleWithIdentifier:@"com.yourcompany.tests"]]] retain];
+            [NSArray arrayWithObject:[NSBundle bundleForClass:[self class]]]] retain];
   coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
   context = [[NSManagedObjectContext alloc] init];
   [context setPersistentStoreCoordinator:coordinator];
